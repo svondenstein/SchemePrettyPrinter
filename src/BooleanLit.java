@@ -1,4 +1,3 @@
-import java.io.*;
 class BooleanLit extends Node {
   private boolean booleanVal;
 
@@ -13,9 +12,9 @@ class BooleanLit extends Node {
 
   public void print(int n) {
     if (booleanVal) {
-      System.out.println("#t");
+      System.out.print("#t");
     } else {
-      System.out.println("#f");
+      System.out.print("#f");
     }
   }
 }

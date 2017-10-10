@@ -1,12 +1,6 @@
-import java.io.*;
-
 class Regular extends Special {
 
     public Regular(){}
-
-    void printQuote(Node t, int n, boolean p){
-        print(t, n, p);
-    }
 
     void print(Node t, int n, boolean p) {
         if (!p) {
@@ -29,5 +23,9 @@ class Regular extends Special {
         } else {
             t.getCdr().print(n,true);
         }
+    }
+
+    void printQuote(Node t, int n, boolean p){
+        print(t, n, p);
     }
 }

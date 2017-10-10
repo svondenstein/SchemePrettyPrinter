@@ -1,5 +1,3 @@
-// Scanner.java -- the implementation of class Scanner
-
 import java.io.*;
 
 class Scanner {
@@ -172,7 +170,6 @@ class Scanner {
 
         // Integer constants
         else if (isADigit(ch)) {
-            //int i = ch - '0';
             int i = 0;
             int value = 0;
 
@@ -228,10 +225,6 @@ class Scanner {
                 buf[0] = (byte) bite;
             }
             String result = new String(bufCleaner()).toLowerCase();
-            /*if(result.compareTo("quote") == 0) {
-                return new Token(Token.QUOTE);
-            }
-            */
             return new IdentToken(result);
         }
 

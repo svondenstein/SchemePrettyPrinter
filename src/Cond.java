@@ -1,4 +1,5 @@
 class Cond extends Special {
+
     public Cond(){}
 
     void print(Node t, int n, boolean p) {
@@ -8,22 +9,17 @@ class Cond extends Special {
         t.getCar().print(n, true);
         System.out.println();
         if (!t.getCdr().isNull()) {
-            printSubtree(t.getCdr(), n + 4, false);
+            printSubtree(t.getCdr(), n + 4);
         }
     }
 
-    private void printSubtree(Node t, int n, boolean isQuote) {
-        if (isQuote) {
+    private void printSubtree(Node t, int n) {
+        for(int i = 0; i < n; i++)
             System.out.print(" ");
-            t.getCar().printQuote(n, false);
-        } else {
-            for(int i = 0; i < n; i++)
-                System.out.print(" ");
-            t.getCar().print(n);
-            System.out.println();
-        }
+        t.getCar().print(n);
+        System.out.println();
         if(!t.getCdr().isNull()) {
-            printSubtree(t.getCdr(), n, isQuote);
+            printSubtree(t.getCdr(), n);
         } else {
             t.getCdr().print(n - 4, true);
         }
@@ -35,7 +31,7 @@ class Cond extends Special {
         }
         t.getCar().print(n, true);
         if (!t.getCdr().isNull()) {
-            printSubtree(t.getCdr(), 0, true);
+            printSubtree(t.getCdr(), 0);
         }
     }
 }
