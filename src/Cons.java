@@ -60,10 +60,6 @@ class Cons extends Node {
 	parseList();
     }
 
-    public boolean isQuote() {
-        return form instanceof Quote;
-    }
-
     void print(int n) {
 	form.print(this, n, false);
     }

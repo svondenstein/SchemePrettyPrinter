@@ -9,8 +9,7 @@ class Define extends Special {
         t.getCar().print(n, true);
         System.out.print(" ");
         t.getCdr().getCar().print(n, false);
-        if (t.getCdr().getCdr().isPair()
-                && t.getCdr().getCdr().getCar().isPair() && !((Cons) t.getCdr().getCdr().getCar()).isQuote()) {
+        if (t.getCdr().getCar().isPair()) {
             System.out.println();
             printSubtree(t.getCdr().getCdr(), n + 4);
         } else {
