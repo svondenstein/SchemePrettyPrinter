@@ -9,19 +9,16 @@ class Lambda extends Special {
     public Lambda(){}
 
     void print(Node t, int n, boolean p) {
-        if(!p) {
-            for(int i = 0; i < n; i++) {
-                System.out.print(" ");
-            }
+        if (!p) {
             System.out.print("(");
-            p = true;
         }
-        if (t.getCar().isPair()) {
-            p = false;
+        t.getCar().print(n, true);
+        System.out.print(" ");
+        t.getCdr().getCar().print(n, false);
+        if (t.getCdr().getCdr().isPair()) {
+            System.out.println();
+            printSubtree(t.getCdr().getCdr(), n + 4, false);
         }
-        t.getCar().print(n, p);
-        p = true;
-        t.getCdr().print(4, false);
     }
 
     private void printSubtree(Node t, int n, boolean isQuote) {
