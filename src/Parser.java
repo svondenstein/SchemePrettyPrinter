@@ -70,7 +70,10 @@ class Parser {
         return new Nil();
     }
     else if(token.getType() == TokenType.IDENT){
-        return new Ident(token.getName());
+        if(token.getName().compareTo("quote") == 0)
+            return new Ident("\'");
+        else
+            return new Ident(token.getName());
     }
     else {
         System.err.println("Parsing Error. Unexpected Token of Type: " + token.getName());
@@ -121,7 +124,10 @@ class Parser {
             return new Nil();
         }
         else if(token.getType() == TokenType.IDENT){
-            return new Ident(token.getName());
+            if(token.getName().compareTo("quote") == 0)
+                return new Ident("\'");
+            else
+                return new Ident(token.getName());
         }
         else {
             System.err.println("Parsing Error. Unexpected Token of Type: " + token.getName());

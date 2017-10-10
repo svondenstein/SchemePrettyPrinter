@@ -228,9 +228,10 @@ class Scanner {
                 buf[0] = (byte) bite;
             }
             String result = new String(bufCleaner()).toLowerCase();
-            if(result.compareTo("quote") == 0) {
+            /*if(result.compareTo("quote") == 0) {
                 return new Token(Token.QUOTE);
             }
+            */
             return new IdentToken(result);
         }
 

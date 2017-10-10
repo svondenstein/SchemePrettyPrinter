@@ -1,11 +1,6 @@
 import java.io.*;
 
 class Lambda extends Special {
- 
-    // TODO: Add any fields needed.
-
- 
-    // TODO: Add an appropriate constructor.
     public Lambda(){}
 
     void print(Node t, int n, boolean p) {
@@ -25,7 +20,8 @@ class Lambda extends Special {
         if (isQuote) {
             System.out.print(" ");
             t.getCar().printQuote(n, false);
-        } else {
+        }
+        else {
             for(int i = 0; i < n; i++)
                 System.out.print(" ");
             t.getCar().print(n);
