@@ -24,8 +24,4 @@ class Regular extends Special {
             t.getCdr().print(n,true);
         }
     }
-
-    void printQuote(Node t, int n, boolean p){
-        print(t, n, p);
-    }
 }

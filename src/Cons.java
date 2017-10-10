@@ -37,7 +37,6 @@ class Cons extends Node {
         }
 
     }
-    // TODO: Add any helper functions for parseList as appropriate.
 
     @Override
     public boolean isPair(){
@@ -55,20 +54,16 @@ class Cons extends Node {
     }
 
     public Cons(Node a, Node d) {
-	car = a;
-	cdr = d;
-	parseList();
+	    car = a;
+	    cdr = d;
+	    parseList();
     }
 
     void print(int n) {
-	form.print(this, n, false);
+	    form.print(this, n, false);
     }
 
     void print(int n, boolean p) {
-	form.print(this, n, p);
-    }
-
-    void printQuote(int n, boolean p) {
-        form.printQuote(this, n, p);
+	    form.print(this, n, p);
     }
 }

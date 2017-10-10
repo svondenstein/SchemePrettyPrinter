@@ -11,8 +11,4 @@ class Set extends Special {
             System.out.print(" ");
         t.getCdr().print(n, true);
     }
-
-    void printQuote(Node t, int n, boolean p) {
-        print(t, n, p);
-    }
 }

@@ -24,14 +24,4 @@ class Begin extends Special {
             t.getCdr().print(n - 4, true);
         }
     }
-
-    void printQuote(Node t, int n, boolean p) {
-        if(!p) {
-            System.out.print(" ");
-        }
-        t.getCar().print(n, true);
-        if (!t.getCdr().isNull()) {
-            printSubtree(t.getCdr(), 0);
-        }
-    }
 }
