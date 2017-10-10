@@ -28,7 +28,8 @@ class Lambda extends Special {
         if (isQuote) {
             System.out.print(" ");
             t.getCar().printQuote(n, false);
-        } else {
+        }
+        else {
             for(int i = 0; i < n; i++)
                 System.out.print(" ");
             t.getCar().print(n);

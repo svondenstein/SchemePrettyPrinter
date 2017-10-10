@@ -6,9 +6,6 @@ class If extends Special {
 
     void print(Node t, int n, boolean p) {
         if (!p) {
-            for (int i = 0; i < n; i++) {
-                System.out.print(" ");
-            }
             System.out.print("(");
         }
         t.getCar().print(n, true);
@@ -16,7 +13,7 @@ class If extends Special {
         t.getCdr().getCar().print(n, false);
         if (t.getCdr().getCdr().isPair()) {
             System.out.println();
-            t.getCdr().getCdr().print(n + 4, true);
+            printSubtree(t.getCdr().getCdr(),n+4,false);
         } /*else {
             System.out.print(" ");
             t.getCdr().getCdr().print(n, true);

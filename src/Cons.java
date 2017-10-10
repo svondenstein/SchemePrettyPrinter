@@ -13,7 +13,7 @@ class Cons extends Node {
     // parsing up to the interpreter.
     void parseList() {
         if(car.isSymbol()) {
-            if (((Ident) car).getName().compareTo("\'") == 0) {
+            if (((Ident) car).getName().compareTo("\'") == 0 || (((Ident) car).getName().compareTo("quote") == 0)){
                 form = new Quote();
             } else if (((Ident) car).getName().compareTo("set!") == 0) {
                 form = new Set();
