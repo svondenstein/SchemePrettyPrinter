@@ -40,11 +40,7 @@ solution="$solndir/SPP.exe"
 
 cd $subdir
 
-if ls *.java 1> /dev/null 2>&1; then
-    exe="java -cp $subdir Main"
-else
-    exe="$subdir/`ls *.exe`"
-fi
+exe="java -cp $subdir Main"
 
 report="$subdir/testreport.txt"
 
