@@ -29,22 +29,24 @@
 # Author: Gerald Baumgartner
 # Date:   11/10/2015
 
-project="project1"
-
-solution="/classes/cs4101/cs4101_bau/Csharp-Testing/prog1.soln/SPP.exe"
-testdir="/classes/cs4101/cs4101_bau/Csharp-Testing/Tests/$project"
-
 subdir="`pwd`"
-submission="${subdir##*/}"
-student="${submission%%-*}"
+
+cd ../tests
+testdir="`pwd`"
+
+cd ../soln
+solndir="`pwd`"
+solution="$solndir/SPP.exe"
+
+cd $subdir
 
 if ls *.java 1> /dev/null 2>&1; then
-    exe="/usr/java/java8/bin/java -cp $subdir Main"
+    exe="java -cp $subdir Main"
 else
     exe="$subdir/`ls *.exe`"
 fi
 
-report="$subdir/${student}-testreport.txt"
+report="$subdir/testreport.txt"
 
 if ls tmp 1> /dev/null 2>&1; then
     mv tmp tmp$$
@@ -145,3 +147,4 @@ echo "$nerrs tests had errors" >> $report
 # echo "Score: $score" >> $report
 
 cd $subdir
+rm -r tmp
