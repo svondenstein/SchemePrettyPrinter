@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<project name="SPP" default="test" basedir=".">
+    <!-- Sets directory variables -->
+    <property name="src.dir" location="src" />
+    <property name="build.dir" location="bin" />
+    <property name="tests.dir" location="tests"/>
+
+    <!-- Deletes the existing build and dist directory-->
+    <target name="clean">
+        <delete dir="${build.dir}" />
+    </target>
+
+    <!-- Creates the  build and dist directory-->
+    <target name="makedir">
+        <mkdir dir="${build.dir}" />
+    </target>
+
+    <!-- Compiles the java code -->
+    <target name="compile" depends="clean, makedir">
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+        </javac>
+    </target>
+
+    <!--Tests the deployable jar file using runtests -->
+    <target name="test" depends="compile">
+        <exec executable="${basedir}\runtests" dir="${build.dir}"/>
+    </target>
+
+</project>
