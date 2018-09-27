@@ -11,6 +11,6 @@ class IntToken extends Token {
   }
     
   int getIntVal() {
-    return intVal;
+      return intVal;
   }
 }

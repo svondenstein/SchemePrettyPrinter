@@ -11,19 +11,42 @@ class Node {
 
   void printQuote(int n, boolean p){}
 
-  public boolean isBoolean()   { return false; }  // BooleanLit
-  public boolean isNumber() { return false; }  // IntLit
-  public boolean isString() { return false; }  // StringLit
-  public boolean isSymbol() { return false; }  // Ident
-  public boolean isNull()   { return false; }  // nil
-  public boolean isPair()   { return false; }  // Cons
+  // BooleanLit
+  public boolean isBoolean()   {
+      return false;
+  }
+
+  // IntLit
+  public boolean isNumber() {
+      return false;
+  }
+
+  // StringLit
+  public boolean isString() {
+      return false;
+  }
+
+  // Ident
+  public boolean isSymbol() {
+      return false;
+  }
+
+  // nil
+  public boolean isNull() {
+      return false;
+  }
+
+  // Cons
+  public boolean isPair() {
+      return false;
+  }
 
   public Node getCar() {
-    return null;
+      return null;
   }
   
   public Node getCdr() {
-    return null;
+      return null;
   }
   
   public void setCar(Node a) {

@@ -5,7 +5,9 @@
 class Parser {
   private Scanner scanner;
 
-  public Parser(Scanner s) { scanner = s; }
+  public Parser(Scanner s) {
+      scanner = s;
+  }
   
   public Node parseExp() {
     Token token = scanner.getNextToken();

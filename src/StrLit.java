@@ -8,11 +8,11 @@ class StrLit extends Node {
   public StrLit(String s) { strVal = s; }
 
   @Override
-  public boolean isString(){
+  public boolean isString() {
       return true;
   }
 
   public void print(int n) {
-    System.out.print("\"" + strVal + "\"");
+      System.out.print("\"" + strVal + "\"");
   }
 }

@@ -11,6 +11,6 @@ class StrToken extends Token {
   }
 
   String getStrVal() {
-    return strVal;
+      return strVal;
   }
 }
