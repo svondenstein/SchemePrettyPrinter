@@ -5,7 +5,7 @@
 interface TokenType {
     int QUOTE = 0;			// '
     int LPAREN = 1;			// (
-    int RPAREN = 2;                 // )
+    int RPAREN = 2;         // )
     int DOT = 3;			// .
     int TRUE = 4;			// #t
     int FALSE = 5;			// #f
