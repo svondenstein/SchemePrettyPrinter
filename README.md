@@ -16,4 +16,4 @@ This is a Pretty Printer for Scheme implemented in Java. The program takes Schem
 
 ## Licensing
 
-The code in the runtests file is not mine, it was written by the instructor of CSC 4101, Gerald Baumgartner. This is also true for all files in the tests/ folder.
+The code in the _runtests_ file is not mine, it was written by the instructor of CSC 4101, Gerald Baumgartner. This is also true for all files in the _tests/_ folder.
