@@ -1,3 +1,7 @@
+/*
+ * @authors Thomas Johnson, Stephen Vondenstein
+ * Course: CSC 4101
+ */
 class Node {
   void print(int n) {}
 

@@ -1,5 +1,7 @@
-// Main.java -- the main program
-
+/*
+ * @authors Thomas Johnson, Stephen Vondenstein
+ * Course: CSC 4101
+ */
 import java.io.*;
 
 public class Main {

@@ -1,3 +1,7 @@
+/*
+ * @authors Thomas Johnson, Stephen Vondenstein
+ * Course: CSC 4101
+ */
 class Lambda extends Special {
 
     public Lambda(){}

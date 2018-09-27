@@ -1,3 +1,7 @@
+/*
+ * @authors Thomas Johnson, Stephen Vondenstein
+ * Course: CSC 4101
+ */
 interface TokenType {
     int QUOTE = 0;			// '
     int LPAREN = 1;			// (
