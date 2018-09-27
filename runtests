@@ -143,4 +143,9 @@ echo "$nerrs tests had errors" >> $report
 # echo "Score: $score" >> $report
 
 cd $subdir
+
+if [$nform -eq 0] && [$nfail -eq 0] && [$nerrs -eq 0]; then
+    touch passed
+fi
+
 rm -r tmp

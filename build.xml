@@ -24,6 +24,15 @@
     <!--Tests the deployable jar file using runtests -->
     <target name="test" depends="compile">
         <exec executable="${basedir}\runtests" dir="${build.dir}"/>
+        <fail message="One or more tests failed. See testreport.txt for more information.">
+            <condition>
+                <not>
+                    <resourcecount count="1">
+                        <fileset id="fs" dir="${build.dir}" includes="passed"/>
+                    </resourcecount>
+                </not>
+            </condition>
+        </fail>
     </target>
 
 </project>
