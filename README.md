@@ -10,7 +10,7 @@ This is a Pretty Printer for Scheme implemented in Java. The program takes Schem
 1. Clone locally via GitHub Desktop, or via CLI: 
 `git clone https://github.com/svondenstein/SchemePrettyPrinter.git`
 2. Compile the source files in src/: `javac *.java`
-  - optionally `javac -d ../out *.java` to preserve a clean `src` directory
+  -- optionally `javac -d ../out *.java` to preserve a clean `src` directory
 3. Run Main: `java Main`
 4. Enter a valid Scheme statement via the command line.
 5. The program will output a 'pretty printed' Scheme statement which matches the inputted statement.
