@@ -8,7 +8,9 @@ class Scanner {
     private PushbackInputStream in;
     private byte[] buf = new byte[1000];
 
-    public Scanner(InputStream i) { in = new PushbackInputStream(i); }
+    public Scanner(InputStream i) {
+        in = new PushbackInputStream(i);
+    }
 
     private boolean isSpecialInitial(char ch) {
         if (ch == '!' || ch == '$' || ch == '%' || ch == '&' || ch == '*' || ch == '/' || ch == ':' || ch == '<' || ch == '=' || ch == '>' || ch == '?' || ch == '^' || ch == '_' || ch == '~')

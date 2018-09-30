@@ -12,6 +12,6 @@ class Quote extends Special {
     }
 
     void printQuote(Node t, int n, boolean p) {
-        print(t, n, p);
+         print(t, n, p);
     }
 }

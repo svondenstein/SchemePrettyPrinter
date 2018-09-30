@@ -5,7 +5,9 @@
 class Ident extends Node {
   private String name;
 
-  public Ident(String n) { name = n; }
+  public Ident(String n) {
+    name = n;
+  }
 
   @Override
   public boolean isSymbol(){

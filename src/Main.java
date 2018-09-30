@@ -2,8 +2,6 @@
  * @authors Thomas Johnson, Stephen Vondenstein
  * Course: CSC 4101
  */
-import java.io.*;
-
 public class Main {
     // Array of token names used for debugging the scanner
     public static final String TokenName[] = {
@@ -32,18 +30,17 @@ public class Main {
 	    // debug scanner
 	    Token tok = scanner.getNextToken();
 	    while (tok != null) {
-		int tt = tok.getType();
-		System.out.print(TokenName[tt]);
-		if (tt == Token.INT)
-		    System.out.println(", intVal = " + tok.getIntVal());
-		else if (tt == Token.STRING)
-		    System.out.println(", strVal = " + tok.getStrVal());
-		else if (tt == Token.IDENT)
-		    System.out.println(", name = " + tok.getName());
-		else
-		    System.out.println();
-
-		tok = scanner.getNextToken();
+			int tt = tok.getType();
+			System.out.print(TokenName[tt]);
+			if (tt == Token.INT)
+		    	System.out.println(", intVal = " + tok.getIntVal());
+			else if (tt == Token.STRING)
+		    	System.out.println(", strVal = " + tok.getStrVal());
+			else if (tt == Token.IDENT)
+		    	System.out.println(", name = " + tok.getName());
+			else
+		    	System.out.println();
+			tok = scanner.getNextToken();
 	    }
 	}
 	

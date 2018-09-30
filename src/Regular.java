@@ -12,6 +12,7 @@ class Regular extends Special {
         }
         if (t.getCar().isPair() || t.getCar().isNull()) {
             t.getCar().print(n, false);
+            //????
             if (!t.getCdr().isNull()) {
                 System.out.print(" ");
             }
@@ -21,7 +22,6 @@ class Regular extends Special {
                 System.out.print(" ");
             }
         }
-
         if (t.getCdr().isNull()) {
             t.getCdr().print(0, true);
         } else {
