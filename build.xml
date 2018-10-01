@@ -1,38 +1,55 @@
 <?xml version="1.0"?>
-<project name="SPP" default="test" basedir=".">
-    <!-- Sets directory variables -->
-    <property name="src.dir" location="src" />
-    <property name="build.dir" location="bin" />
-    <property name="tests.dir" location="tests"/>
+<project name="SPP" default="build" basedir=".">
+    <!-- Set directory variables -->
+    <property name="srcdir" location="src" />
+    <property name="builddir" location="bin" />
+    <property name="testsdir" location="tests"/>
+    <property name="distdir" location="dist" />
 
-    <!-- Deletes the existing build and dist directory-->
+    <!-- Delete existing output directories -->
     <target name="clean">
-        <delete dir="${build.dir}" />
+        <delete dir="${builddir}" />
+        <delete dir="${distdir}" />
     </target>
 
-    <!-- Creates the  build and dist directory-->
+    <!-- Create output directories -->
     <target name="makedir">
-        <mkdir dir="${build.dir}" />
+        <mkdir dir="${builddir}" />
+        <mkdir dir="${distdir}" />
     </target>
 
-    <!-- Compiles the java code -->
+    <!-- Compile -->
     <target name="compile" depends="clean, makedir">
-        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+        <javac srcdir="${srcdir}" destdir="${builddir}" includeantruntime="false">
         </javac>
     </target>
 
-    <!--Tests the deployable jar file using runtests -->
+    <!-- Create jar file -->
+    <target name="dist" depends="compile">
+        <jar destfile="${distdir}\SPP.jar" basedir="${builddir}">
+            <manifest>
+                <attribute name="Main-Class" value="edu.lsu.CSC4101.SchemePrettyPrinter.Main" />
+            </manifest>
+        </jar>
+    </target>
+
+    <!-- Test using runtests -->
     <target name="test" depends="compile">
-        <exec executable="${basedir}\runtests" dir="${build.dir}"/>
+        <exec executable="${basedir}\runtests" dir="${builddir}"/>
         <fail message="One or more tests failed. See testreport.txt for more information.">
             <condition>
                 <not>
                     <resourcecount count="1">
-                        <fileset id="fs" dir="${build.dir}" includes="passed"/>
+                        <fileset id="fs" dir="${builddir}" includes="passed"/>
                     </resourcecount>
                 </not>
             </condition>
         </fail>
+    </target>
+
+    <!-- Run Tests and Build for Distribution -->
+    <target name="build" depends="dist, test">
+        <description>Main target</description>
     </target>
 
 </project>
