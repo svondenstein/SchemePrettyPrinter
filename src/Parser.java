@@ -57,20 +57,20 @@ class Parser {
             case TokenType.STRING: return new StrLit(token.getStrVal());
             case TokenType.IDENT: {
                 if(token.getName().compareTo("quote") == 0)
-                    return new Ident("\'"); //why is this different from tt.QUOTE?
+                    return new Cons(new Ident("\'"), new Cons(parseExp(), new Nil()));
                 else return new Ident(token.getName());
             }
             case TokenType.RPAREN: {
                 System.err.println("Parsing Error. Unexpected Token of Type: )");
-                return new Nil(); //return null?
+                return parseExp();
             }
             case TokenType.DOT: {
                 System.err.println("Parsing Error. Unexpected Token of Type: .");
-                return new Nil(); //return null?
+                return parseExp();
             }
             default: {
                 System.err.println("Parsing Error. Unexpected Token of Type: " + token.getName());
-                return new Nil(); //return null?
+                return parseExp();
             }
         }
     }
@@ -87,8 +87,8 @@ class Parser {
                 scanner.putBack(token);
                 return new Cons(parseExp(), new Nil());
             } else {
-                System.err.println("Parse Error. Unexpected Token of Type: )");
-                return new Nil();
+                System.err.println("Parsing Error. Unexpected Token of Type: )");
+                return parseExp();
             }
         }
         else {
