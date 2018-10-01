@@ -35,12 +35,12 @@
 
     <!-- Test using runtests -->
     <target name="test" depends="compile">
-        <exec executable="${basedir}\runtests" dir="${builddir}"/>
+        <exec executable="${basedir}\runtests" dir="${basedir}"/>
         <fail message="One or more tests failed. See testreport.txt for more information.">
             <condition>
                 <not>
                     <resourcecount count="1">
-                        <fileset id="fs" dir="${builddir}" includes="passed"/>
+                        <fileset id="fs" dir="${testsdir}" includes="passed"/>
                     </resourcecount>
                 </not>
             </condition>
