@@ -2,6 +2,8 @@
  * @authors Thomas Johnson, Stephen Vondenstein
  * Course: CSC 4101
  */
+package edu.lsu.CSC4101.SchemePrettyPrinter;
+
 class BooleanLit extends Node {
   private boolean booleanVal;
 
@@ -21,4 +23,8 @@ class BooleanLit extends Node {
       System.out.print("#f");
     }
   }
+  //Probably not needed
+//  public boolean getVal() {
+//    return booleanVal;
+//  }
 }

@@ -2,6 +2,8 @@
  * @authors Thomas Johnson, Stephen Vondenstein
  * Course: CSC 4101
  */
+package edu.lsu.CSC4101.SchemePrettyPrinter;
+
 public class Main {
     // Array of token names used for debugging the scanner
     public static final String TokenName[] = {

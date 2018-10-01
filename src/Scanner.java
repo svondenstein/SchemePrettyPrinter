@@ -2,18 +2,39 @@
  * @authors Thomas Johnson, Stephen Vondenstein
  * Course: CSC 4101
  */
+package edu.lsu.CSC4101.SchemePrettyPrinter;
+
 import java.io.*;
 
 class Scanner {
     private PushbackInputStream in;
     private byte[] buf = new byte[1000];
-
+    //private Token revert = null;
     public Scanner(InputStream i) {
         in = new PushbackInputStream(i);
     }
 
+//    public void putBack(Token token) {
+//        revert = token;
+//    }
+
     private boolean isSpecialInitial(char ch) {
-        if (ch == '!' || ch == '$' || ch == '%' || ch == '&' || ch == '*' || ch == '/' || ch == ':' || ch == '<' || ch == '=' || ch == '>' || ch == '?' || ch == '^' || ch == '_' || ch == '~')
+        if (
+                ch == '!' ||
+                ch == '$' ||
+                ch == '%' ||
+                ch == '&' ||
+                ch == '*' ||
+                ch == '/' ||
+                ch == ':' ||
+                ch == '<' ||
+                ch == '=' ||
+                ch == '>' ||
+                ch == '?' ||
+                ch == '^' ||
+                ch == '_' ||
+                ch == '~'
+        )
             return true;
         else
             return false;

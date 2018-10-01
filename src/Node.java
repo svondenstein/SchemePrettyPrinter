@@ -2,6 +2,8 @@
  * @authors Thomas Johnson, Stephen Vondenstein
  * Course: CSC 4101
  */
+package edu.lsu.CSC4101.SchemePrettyPrinter;
+
 class Node {
     // The argument of print(int) is the number of characters to indent.
     // Every subclass of Node must implement print(int).

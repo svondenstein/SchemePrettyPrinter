@@ -2,6 +2,8 @@
  * @authors Thomas Johnson, Stephen Vondenstein
  * Course: CSC 4101
  */
+package edu.lsu.CSC4101.SchemePrettyPrinter;
+
 class Regular extends Special {
 
     public Regular(){}
@@ -28,4 +30,7 @@ class Regular extends Special {
             t.getCdr().print(n,true);
         }
     }
+//    public void printQuote(Node t, int n, boolean p) {
+//        print(t, n, p);
+//    }
 }
