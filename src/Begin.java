@@ -6,7 +6,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 
 class Begin extends Special {
 
-    public Begin(){}
+    Begin(){}
 
     void print(Node t, int n, boolean p) {
         if(!p) {

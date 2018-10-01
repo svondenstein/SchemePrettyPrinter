@@ -6,7 +6,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 
 class Define extends Special {
 
-    public Define(){}
+    Define(){}
 
     void print(Node t, int n, boolean p) {
         if(!p) {

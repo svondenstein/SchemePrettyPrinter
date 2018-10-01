@@ -6,7 +6,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 
 class Cond extends Special {
 
-    public Cond(){}
+    Cond(){}
 
     void print(Node t, int n, boolean p) {
         if(!p) {

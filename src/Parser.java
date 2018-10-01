@@ -7,11 +7,11 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 class Parser {
   private Scanner scanner;
 
-  public Parser(Scanner s) {
+  Parser(Scanner s) {
       scanner = s;
   }
   
-  public Node parseExp() {
+  Node parseExp() {
     Token token = scanner.getNextToken();
     if(token == null){
         return null;
@@ -55,7 +55,7 @@ class Parser {
   }
 
 
-    protected Node parseExp(Token token) {
+    private Node parseExp(Token token) {
         if(token == null){
             return new Nil();
         }
@@ -97,7 +97,7 @@ class Parser {
         }
     }
   
-  protected Node parseRest() {
+  private Node parseRest() {
       Token token = scanner.getNextToken();
       if(token.getType() == TokenType.RPAREN) {
           return new Nil();
@@ -108,7 +108,7 @@ class Parser {
 
   }
 
-  protected Node parseMore(){
+  private Node parseMore(){
       Token token = scanner.getNextToken();
       if(token.getType() == TokenType.DOT){
           token  = scanner.getNextToken();
@@ -125,7 +125,7 @@ class Parser {
       }
   }
 
-    protected Node parseRest(Token token) {
+    private Node parseRest(Token token) {
         if(token.getType() == TokenType.RPAREN) {
             return new Nil();
         }

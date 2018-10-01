@@ -7,7 +7,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 class StrLit extends Node {
   private String strVal;
 
-  public StrLit(String s) {
+  StrLit(String s) {
       strVal = s;
   }
 

@@ -7,7 +7,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 class BooleanLit extends Node {
   private boolean booleanVal;
 
-  public BooleanLit(boolean b) {
+  BooleanLit(boolean b) {
     booleanVal = b;
   }
 

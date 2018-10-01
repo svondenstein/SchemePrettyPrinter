@@ -7,7 +7,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 class StrToken extends Token {
   private String strVal;
 
-  public StrToken(String s) {
+  StrToken(String s) {
     super(TokenType.STRING);
     strVal = s;
   }

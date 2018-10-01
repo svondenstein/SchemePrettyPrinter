@@ -7,7 +7,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 class IdentToken extends Token {
   private String name;
 
-  public IdentToken(String s) {
+  IdentToken(String s) {
     super(TokenType.IDENT);
     name = s;
   }

@@ -6,7 +6,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 
 class Quote extends Special {
 
-    public Quote(){}
+    Quote(){}
 
     void print(Node t, int n, boolean p) {
         t.getCar().print(n, p); //print '

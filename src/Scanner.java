@@ -10,7 +10,7 @@ class Scanner {
     private PushbackInputStream in;
     private byte[] buf = new byte[1000];
     //private Token revert = null;
-    public Scanner(InputStream i) {
+    Scanner(InputStream i) {
         in = new PushbackInputStream(i);
     }
 
@@ -96,7 +96,7 @@ class Scanner {
         return ret;
     }
 
-    public Token getNextToken() {
+    Token getNextToken() {
         int bite = -1;
         //buf = new byte[1000];
         for (int count = 0; count < 1000; count++) {
@@ -260,5 +260,5 @@ class Scanner {
             System.err.println("Illegal input character '" + (char) ch + '\'');
             return getNextToken();
         }
-    };
+    }
 }

@@ -6,7 +6,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 
 class Regular extends Special {
 
-    public Regular(){}
+    Regular(){}
 
     void print(Node t, int n, boolean p) {
         if (!p) {

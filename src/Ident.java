@@ -7,7 +7,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 class Ident extends Node {
   private String name;
 
-  public Ident(String n) {
+  Ident(String n) {
     name = n;
   }
 
@@ -16,7 +16,7 @@ class Ident extends Node {
       return true;
   }
 
-  public String getName(){
+  String getName(){
     return name;
   }
 

@@ -6,7 +6,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 
 class Let extends Special {
 
-    public Let(){}
+    Let(){}
 
     void print(Node t, int n, boolean p) {
         if(!p) {

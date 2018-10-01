@@ -6,7 +6,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 
 public class Main {
     // Array of token names used for debugging the scanner
-    public static final String TokenName[] = {
+    private static final String TokenName[] = {
 	"QUOTE",			// '
 	"LPAREN",			// (
 	"RPAREN",			// )

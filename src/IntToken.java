@@ -7,7 +7,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 class IntToken extends Token {
   private int intVal;
 
-  public IntToken(int i) {
+  IntToken(int i) {
     super(TokenType.INT);
     intVal = i;
   }

@@ -6,7 +6,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 
 class Nil extends Node {
 
-  public Nil() {}
+  Nil() {}
 
   @Override
   public boolean isNull(){
