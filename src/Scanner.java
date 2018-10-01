@@ -19,8 +19,7 @@ class Scanner {
 //    }
 
     private boolean isSpecialInitial(char ch) {
-        if (
-                ch == '!' ||
+        return ch == '!' ||
                 ch == '$' ||
                 ch == '%' ||
                 ch == '&' ||
@@ -33,55 +32,33 @@ class Scanner {
                 ch == '?' ||
                 ch == '^' ||
                 ch == '_' ||
-                ch == '~'
-        )
-            return true;
-        else
-            return false;
+                ch == '~';
     }
 
     private boolean isALetter(char ch) {
         if (ch >= 'A' && ch <= 'Z')
             return true;
-        else if (ch >= 'a' && ch <= 'z')
-            return true;
-        else
-            return false;
+        else return ch >= 'a' && ch <= 'z';
     }
 
     private boolean isADigit(char ch) {
-        if (ch >= '0' && ch <= '9')
-            return true;
-        else
-            return false;
+        return ch >= '0' && ch <= '9';
     }
 
     private boolean isSpecialSubsequent(char ch) {
-        if (ch == '+' || ch == '-' || ch == '.' || ch == '@')
-            return true;
-        else
-            return false;
+        return ch == '+' || ch == '-' || ch == '.' || ch == '@';
     }
 
     private boolean isInitial(char ch) {
-        if (isALetter(ch) || isSpecialInitial(ch))
-            return true;
-        else
-            return false;
+        return isALetter(ch) || isSpecialInitial(ch);
     }
 
     private boolean isSubsequent(char ch) {
-        if (isInitial(ch) || isADigit(ch) || isSpecialSubsequent(ch))
-            return true;
-        else
-            return false;
+        return isInitial(ch) || isADigit(ch) || isSpecialSubsequent(ch);
     }
 
     private boolean isPeculiarIdentifier(char ch) {
-        if (ch == '+' || ch == '-')
-            return true;
-        else
-            return false;
+        return ch == '+' || ch == '-';
     }
 
     private byte[] bufCleaner() {
@@ -170,7 +147,7 @@ class Scanner {
             else if (ch == 'f')
                 return new Token(Token.FALSE);
             else {
-                System.err.println("Illegal character '" + (char) ch + "' following #");
+                System.err.println("Illegal character '" + ch + "' following #");
                 return getNextToken();
             }
         }
@@ -257,7 +234,7 @@ class Scanner {
 
         // Illegal character
         else {
-            System.err.println("Illegal input character '" + (char) ch + '\'');
+            System.err.println("Illegal input character '" + ch + '\'');
             return getNextToken();
         }
     }
