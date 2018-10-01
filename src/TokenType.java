@@ -3,7 +3,8 @@
  * Course: CSC 4101
  */
 package edu.lsu.CSC4101.SchemePrettyPrinter;
-
+// For backward compatibility with Java 1.4, we use explicit constant
+// declarations.  Java 1.5 would now have an enum construct.
 interface TokenType {
     int QUOTE = 0;			// '
     int LPAREN = 1;			// (
