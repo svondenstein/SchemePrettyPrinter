@@ -6,7 +6,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 
 class Lambda extends Special {
 
-    public Lambda(){}
+    Lambda(){}
 
     void print(Node t, int n, boolean p) {
         if (!p) {
