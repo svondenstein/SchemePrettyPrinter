@@ -90,29 +90,25 @@ class Scanner {
         } catch (IOException e) {
             System.err.println("We fail: " + e.getMessage());
         }
-        if (bite == -1)
-            return null;
 
         // Ignore white space
-        while (bite == 32 || bite == 10 || bite == 12 || bite == 13) {
-            try {
-                bite = in.read();
-            } catch (IOException e) {
-                System.err.println("We fail: " + e.getMessage());
-            }
+        if (bite == 32 || bite == 10 || bite == 12 || bite == 13) {
+            return getNextToken();
         }
 
         // Ignore comments
         if (bite == 59) {
             try {
                 while(in.read() != 10);
-                bite = in.read();
             } catch (IOException e) {
                 System.err.println("We fail: " + e.getMessage());
                 bite = -1;
             }
+            return getNextToken();
         }
 
+        if (bite == -1)
+            return null;
         char ch = (char) bite;
 
         // Special characters
