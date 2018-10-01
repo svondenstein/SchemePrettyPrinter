@@ -14,20 +14,14 @@ class Regular extends Special {
         }
         if (t.getCar().isPair() || t.getCar().isNull()) {
             t.getCar().print(n, false);
-            //????
-            if (!t.getCdr().isNull()) {
-                System.out.print(" ");
-            }
         } else {
             t.getCar().print(n, true);
-            if (!t.getCdr().isNull()) {
-                System.out.print(" ");
-            }
         }
-        if (t.getCdr().isNull()) {
-            t.getCdr().print(0, true);
+        if (!t.getCdr().isNull()) {
+            System.out.print(" ");
+            t.getCdr().print(n, true);
         } else {
-            t.getCdr().print(n,true);
+            t.getCdr().print(0, true);
         }
     }
 //    public void printQuote(Node t, int n, boolean p) {
