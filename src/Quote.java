@@ -12,9 +12,4 @@ class Quote extends Special {
         t.getCar().print(n, p); //print '
         t.getCdr().getCar().print(n, false); //print rest of tree
     }
-
-//    @Override
-    void printQuote(Node t, int n, boolean p) {
-         print(t, n, p);
-    }
 }

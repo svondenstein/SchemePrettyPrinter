@@ -23,8 +23,4 @@ class BooleanLit extends Node {
       System.out.print("#f");
     }
   }
-  //Probably not needed
-//  public boolean getVal() {
-//    return booleanVal;
-//  }
 }

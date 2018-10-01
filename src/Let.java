@@ -30,15 +30,4 @@ class Let extends Special {
             t.getCdr().print(n - 4, true);
         }
     }
-//    @Override
-//    void printQuote(Node t, int n, boolean p) {
-//        if(!p) {
-//            System.out.print("(");
-//        }
-//        t.getCar().print(n, true);
-//        System.out.println();
-//        if (!t.getCdr().isNull()) {
-//            printSubtree(t.getCdr(), 0, true);
-//        }
-//    }
 }

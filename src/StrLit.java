@@ -19,8 +19,4 @@ class StrLit extends Node {
   public void print(int n) {
       System.out.print("\"" + strVal + "\"");
   }
-
-//  public String getVal() {
-//      return strVal;
-//  }
 }

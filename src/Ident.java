@@ -23,8 +23,4 @@ class Ident extends Node {
   public void print(int n) {
     System.out.print(name);
   }
-//  probably not needed
-//  public void print(int n, boolean parenPrintedLast) {
-//      print(n);
-//  }
 }

@@ -7,7 +7,7 @@ package edu.lsu.CSC4101.SchemePrettyPrinter;
 class IntLit extends Node {
   private int intVal;
 
-  public IntLit(int i) {
+  IntLit(int i) {
     intVal = i;
   }
 
@@ -19,8 +19,4 @@ class IntLit extends Node {
   public void print(int n) {
     System.out.print(intVal);
   }
-//  probably not needed
-//  public int getVal() {
-//    return intVal;
-//  }
 }
