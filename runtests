@@ -36,12 +36,12 @@ cd ../soln
 solndir="`pwd`"
 solution="$solndir/SPP.exe"
 
-cd ../bin/edu/ls/CSC4101/SchemePrettyPrinter/
+cd ../bin/
 subdir="`pwd`"
 
 cd $subdir
 
-exe="java -cp $subdir Main"
+exe="java -cp $subdir edu.lsu.CSC4101.SchemePrettyPrinter.Main"
 
 report="$subdir/testreport.txt"
 
@@ -147,6 +147,6 @@ cd $subdir
 rm -r tmp
 
 cd $testdir
-if [[$nform -eq 0] && [$nfail -eq 0] && [$nerrs -eq 0]]; then
+if [ $nform -eq 0 ] && [ $nfail -eq 0 ] && [ $nerrs -eq 0 ]; then
     touch passed
 fi
