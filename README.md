@@ -1,4 +1,4 @@
-Scheme Pretty Printer in Java [![Build Status](https://travis-ci.com/svondenstein/SchemePrettyPrinter.svg?branch=master)](https://travis-ci.com/svondenstein/SchemePrettyPrinter)
+Scheme Pretty Printer in Java [![Build Status](https://travis-ci.com/svondenstein/spp.svg?branch=master)](https://travis-ci.com/svondenstein/spp)
 ==================
 
 ## About This Program
